@@ -33,7 +33,8 @@ def list_jobs():
 
 @app.route("/api/jobs")
 def list_jobs_json():
-  return jsonify(JOBS)
+  jobs = get_jobs_db()
+  return jsonify(jobs)
 
 
 if __name__ == '__main__':
